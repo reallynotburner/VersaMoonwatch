@@ -29,3 +29,5 @@ Functions:
   * The indices could also be moved to their own symbol.gui files and imported to increase readability of the code
   * Test if a static image makes a more performant dial than the rendering of the entire thing via svg.
   * Rearrange the index.gui in such a way to allow rendering on Fit Ionic watches.  Right now the hands are all in the wrong places when deployed to Ionic.
+  * for the sake of sanity, perhaps create a fitbit emulator that stands alone without a connection to the internet.  Then you could work on this project with nothing but an IDE and an offline web browser.
+  * UNIT TESTS!  Anyone know any unit tests that work with Fitbit SDK?
