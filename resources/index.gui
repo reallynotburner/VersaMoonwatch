@@ -1,0 +1,520 @@
+<svg class="background">
+  <defs>
+    <link rel="import" href="chronoSeconds.gui" />
+    <link rel="import" href="minutes.gui" />
+    <link rel="import" href="hours.gui" />
+    <link rel="import" href="subdialHands.gui" />
+    <symbol id="dial" x="50%" y="50%" >
+      <circle r="50%"/>
+    </symbol>
+    <symbol id="diamond">
+      <g transform="translate(50%, 0) scale(0.5, 1.0)">
+        <g transform="rotate(45)">
+          <rect x="0" y="0" width="144%" height="144%" />
+        </g>
+      </g>
+    </symbol>
+    <mask id="subdialMask">
+      <circle cx="50%" cy="50%" r="49%" />
+    </mask>
+    <symbol id="subDial">
+      <svg mask="#subdialMask" >
+        <gradientRect class="subdialGradient" />
+        <g class="subDialBase">
+          <circle class="subdialFace" cx="50%" cy="50%" />
+        </g>
+      </svg>
+    </symbol>
+    <symbol id="mainIndice" >
+      <g transform="translate(50%,50%)">
+        <circle cx="-9" cy="-39%" r="4" />
+        <circle cx="9" cy="-39%" r="4" />
+        <rect x="-3" y="-47%+2" width="6" height="9%" />
+        <g transform="rotate(30)">
+          <rect x="-3" y="-47%" width="6" height="9%" />
+        </g>
+        <g transform="rotate(60)">
+          <rect x="-3" y="-47%" width="6" height="9%" />
+        </g>
+        <g transform="rotate(90)">
+          <rect x="-3" y="-47%" width="6" height="9%" />
+        </g>
+        <g transform="rotate(120)">
+          <rect x="-3" y="-47%" width="6" height="9%" />
+        </g>
+        <g transform="rotate(150)">
+          <rect x="-3" y="-47%" width="6" height="9%" />
+        </g>
+        <g transform="rotate(180)">
+          <rect x="-3" y="-47%" width="6" height="9%" />
+        </g>
+        <g transform="rotate(210)">
+          <rect x="-3" y="-47%" width="6" height="9%" />
+        </g>
+        <g transform="rotate(240)">
+          <rect x="-3" y="-47%" width="6" height="9%" />
+        </g>
+        <g transform="rotate(270)">
+          <rect x="-3" y="-47%" width="6" height="9%" />
+        </g>
+        <g transform="rotate(300)">
+          <rect x="-3" y="-47%" width="6" height="9%" />
+        </g>
+        <g transform="rotate(330)">
+          <rect x="-3" y="-47%" width="6" height="9%" />
+        </g>
+      </g>
+    </symbol>
+    <symbol id="mainIndiceLume" >
+      <g transform="translate(50%,50%)">
+        <g id="lume">
+          <circle cx="-9" cy="-39%" r="2" />
+          <circle cx="9" cy="-39%" r="2" />
+          <rect x="-2" y="-47%+2" width="4" height="9%-4" />
+          <g transform="rotate(30)">
+            <rect x="-2" y="-47%+2" width="4" height="9%-4" />
+          </g>
+          <g transform="rotate(60)">
+            <rect x="-2" y="-47%+2" width="4" height="9%-4" />
+          </g>
+          <g transform="rotate(90)">
+            <rect x="-2" y="-47%+2" width="4" height="9%-4" />
+          </g>
+          <g transform="rotate(120)">
+            <rect x="-2" y="-47%+2" width="4" height="9%-4" />
+          </g>
+          <g transform="rotate(150)">
+            <rect x="-2" y="-47%+2" width="4" height="9%-4" />
+          </g>
+          <g transform="rotate(180)">
+            <rect x="-2" y="-47%+2" width="4" height="9%-4" />
+          </g>
+          <g transform="rotate(210)">
+            <rect x="-2" y="-47%+2" width="4" height="9%-4" />
+          </g>
+          <g transform="rotate(240)">
+            <rect x="-2" y="-47%+2" width="4" height="9%-4" />
+          </g>
+          <g transform="rotate(270)">
+            <rect x="-2" y="-47%+2" width="4" height="9%-4" />
+          </g>
+          <g transform="rotate(300)">
+            <rect x="-2" y="-47%+2" width="4" height="9%-4" />
+          </g>
+          <g transform="rotate(330)">
+            <rect x="-2" y="-47%+2" width="4" height="9%-4" />
+          </g>
+        </g>
+      </g>
+    </symbol>
+    <symbol id="mainSecondIndice" fill="darkgrey" >
+      <g id="indiceGroup">
+        <g transform="rotate(6)">
+          <line x1="0" y1="-42%-3" x2="0" y2="-50%+2" stroke-width="1" />
+        </g>
+        <g id="indice" transform="rotate(12)">
+          <line x1="0" y1="-42%-3" x2="0" y2="-50%+2" stroke-width="1" />
+        </g>
+        <g id="indice" transform="rotate(18)">
+          <line x1="0" y1="-42%-3" x2="0" y2="-50%+2" stroke-width="1" />
+        </g>
+        <g id="indice" transform="rotate(24)">
+          <line x1="0" y1="-42%-3" x2="0" y2="-50%+2" stroke-width="1" />
+        </g>
+      </g>
+    </symbol>
+    <symbol id="mainSubSecondIndice" fill="darkgrey" >
+      <g id="mainSubSecondIndiceGroup" transform="translate(50%,50%)">
+        <g id="indice">
+          <line x1="0" y1="-47%-2" x2="0" y2="-50%+2" stroke-width="1" />
+        </g>
+        <g id="indice" transform="rotate(1.2)">
+          <line x1="0" y1="-47%-2" x2="0" y2="-50%+2" stroke-width="1" />
+        </g>
+        <g id="indice" transform="rotate(2.4)">
+          <line x1="0" y1="-47%-2" x2="0" y2="-50%+2" stroke-width="1" />
+        </g>
+        <g id="indice" transform="rotate(3.6)">
+          <line x1="0" y1="-47%-2" x2="0" y2="-50%+2" stroke-width="1" />
+        </g>
+        <g id="indice" transform="rotate(4.8)">
+          <line x1="0" y1="-47%-2" x2="0" y2="-50%+2" stroke-width="1" />
+        </g>
+        <g id="indice" transform="rotate(7.2)">
+          <line x1="0" y1="-47%-2" x2="0" y2="-50%+2" stroke-width="1" />
+        </g>
+        <g id="indice" transform="rotate(8.4)">
+          <line x1="0" y1="-47%-2" x2="0" y2="-50%+2" stroke-width="1" />
+        </g>
+        <g id="indice" transform="rotate(9.6)">
+          <line x1="0" y1="-47%-2" x2="0" y2="-50%+2" stroke-width="1" />
+        </g>
+        <g id="indice" transform="rotate(10.8)">
+          <line x1="0" y1="-47%-2" x2="0" y2="-50%+2" stroke-width="1" />
+        </g>
+        <g id="indice" transform="rotate(13.2)">
+          <line x1="0" y1="-47%-2" x2="0" y2="-50%+2" stroke-width="1" />
+        </g>
+        <g id="indice" transform="rotate(14.4)">
+          <line x1="0" y1="-47%-2" x2="0" y2="-50%+2" stroke-width="1" />
+        </g>
+        <g id="indice" transform="rotate(15.6)">
+          <line x1="0" y1="-47%-2" x2="0" y2="-50%+2" stroke-width="1" />
+        </g>
+        <g id="indice" transform="rotate(16.8)">
+          <line x1="0" y1="-47%-2" x2="0" y2="-50%+2" stroke-width="1" />
+        </g>
+        <g id="indice" transform="rotate(19.2)">
+          <line x1="0" y1="-47%-2" x2="0" y2="-50%+2" stroke-width="1" />
+        </g>
+        <g id="indice" transform="rotate(20.4)">
+          <line x1="0" y1="-47%-2" x2="0" y2="-50%+2" stroke-width="1" />
+        </g>
+        <g id="indice" transform="rotate(21.6)">
+          <line x1="0" y1="-47%-2" x2="0" y2="-50%+2" stroke-width="1" />
+        </g>
+        <g id="indice" transform="rotate(22.8)">
+          <line x1="0" y1="-47%-2" x2="0" y2="-50%+2" stroke-width="1" />
+        </g>
+        <g id="indice" transform="rotate(25.2)">
+          <line x1="0" y1="-47%-2" x2="0" y2="-50%+2" stroke-width="1" />
+        </g>
+        <g id="indice" transform="rotate(26.4)">
+          <line x1="0" y1="-47%-2" x2="0" y2="-50%+2" stroke-width="1" />
+        </g>
+        <g id="indice" transform="rotate(27.6)">
+          <line x1="0" y1="-47%-2" x2="0" y2="-50%+2" stroke-width="1" />
+        </g>
+        <g id="indice" transform="rotate(28.8)">
+          <line x1="0" y1="-47%-2" x2="0" y2="-50%+2" stroke-width="1" />
+        </g>
+      </g>
+    </symbol>
+    <symbol id="subdialIndiceGroup12" fill="lightgray" >
+      <g id="subIndiceGroup">
+        <line x1="0" y1="-57%" x2="0" y2="-40%" stroke-width="1" />
+        <g transform="rotate(30)">
+          <line x1="0" y1="-57%" x2="0" y2="-40%" stroke-width="1" />
+        </g>
+        <g id="subIndice" transform="rotate(60)">
+          <line x1="0" y1="-57%" x2="0" y2="-40%" stroke-width="1" />
+        </g>
+        <g id="subIndice" transform="rotate(90)">
+          <line x1="0" y1="-57%" x2="0" y2="-40%" stroke-width="1" />
+        </g>
+        <g id="subIndice" transform="rotate(120)">
+          <line x1="0" y1="-57%" x2="0" y2="-40%" stroke-width="1" />
+        </g>
+        <g id="subIndice" transform="rotate(150)">
+          <line x1="0" y1="-57%" x2="0" y2="-40%" stroke-width="1" />
+        </g>
+        <g id="subIndice" transform="rotate(180)">
+          <line x1="0" y1="-57%" x2="0" y2="-40%" stroke-width="1" />
+        </g>
+        <g id="subIndice" transform="rotate(210)">
+          <line x1="0" y1="-57%" x2="0" y2="-40%" stroke-width="1" />
+        </g>
+        <g id="subIndice" transform="rotate(240)">
+          <line x1="0" y1="-57%" x2="0" y2="-40%" stroke-width="1" />
+        </g>
+        <g id="subIndice" transform="rotate(270)">
+          <line x1="0" y1="-57%" x2="0" y2="-40%" stroke-width="1" />
+        </g>
+        <g id="subIndice" transform="rotate(300)">
+          <line x1="0" y1="-57%" x2="0" y2="-40%" stroke-width="1" />
+        </g>
+        <g id="subIndice" transform="rotate(330)">
+          <line x1="0" y1="-57%" x2="0" y2="-40%" stroke-width="1" />
+        </g>
+      </g>
+    </symbol>
+    <symbol id="subdialIndiceGroup30" fill="lightgray" >
+      <g id="subIndiceGroup" >
+        <line x1="0" y1="-57%" x2="0" y2="-45%" class="subDialIndice"/>
+        <g transform="rotate(12)">
+          <line x1="0" y1="-57%" x2="0" y2="-45%" class="subDialIndice"/>
+        </g>
+        <g id="subIndice" transform="rotate(24)">
+          <line x1="0" y1="-57%" x2="0" y2="-45%" class="subDialIndice"/>
+        </g>
+        <g id="subIndice" transform="rotate(36)">
+          <line x1="0" y1="-57%" x2="0" y2="-45%" class="subDialIndice"/>
+        </g>
+        <g id="subIndice" transform="rotate(48)">
+          <line x1="0" y1="-57%" x2="0" y2="-45%" class="subDialIndice"/>
+        </g>
+        <g id="subIndice" transform="rotate(60)">
+          <line x1="0" y1="-57%" x2="0" y2="-40%" class="subDialIndice"/>
+        </g>
+        <g id="subIndice" transform="rotate(72)">
+          <line x1="0" y1="-57%" x2="0" y2="-45%" class="subDialIndice"/>
+        </g>
+        <g id="subIndice" transform="rotate(84)">
+          <line x1="0" y1="-57%" x2="0" y2="-45%" class="subDialIndice"/>
+        </g>
+        <g id="subIndice" transform="rotate(96)">
+          <line x1="0" y1="-57%" x2="0" y2="-45%" class="subDialIndice"/>
+        </g>
+        <g id="subIndice" transform="rotate(108)">
+          <line x1="0" y1="-57%" x2="0" y2="-45%" class="subDialIndice"/>
+        </g>
+        <g id="subIndice" transform="rotate(120)">
+          <line x1="0" y1="-57%" x2="0" y2="-45%" class="subDialIndice"/>
+        </g>
+        <g id="subIndice" transform="rotate(132)">
+          <line x1="0" y1="-57%" x2="0" y2="-45%" class="subDialIndice"/>
+        </g>
+        <g id="subIndice" transform="rotate(144)">
+          <line x1="0" y1="-57%" x2="0" y2="-45%" class="subDialIndice"/>
+        </g>
+        <g id="subIndice" transform="rotate(156)">
+          <line x1="0" y1="-57%" x2="0" y2="-45%" class="subDialIndice"/>
+        </g>
+        <g id="subIndice" transform="rotate(168)">
+          <line x1="0" y1="-57%" x2="0" y2="-45%" class="subDialIndice"/>
+        </g>
+        <g id="subIndice" transform="rotate(180)">
+          <line x1="0" y1="-57%" x2="0" y2="-40%" class="subDialIndice" />
+        </g>
+        <g id="subIndice" transform="rotate(192)">
+          <line x1="0" y1="-57%" x2="0" y2="-45%" class="subDialIndice"/>
+        </g>
+        <g id="subIndice" transform="rotate(204)">
+          <line x1="0" y1="-57%" x2="0" y2="-45%" class="subDialIndice"/>
+        </g>
+        <g id="subIndice" transform="rotate(216)">
+          <line x1="0" y1="-57%" x2="0" y2="-45%" class="subDialIndice"/>
+        </g>
+        <g id="subIndice" transform="rotate(228)">
+          <line x1="0" y1="-57%" x2="0" y2="-45%" class="subDialIndice"/>
+        </g>
+        <g id="subIndice" transform="rotate(240)">
+          <line x1="0" y1="-57%" x2="0" y2="-45%" class="subDialIndice"/>
+        </g>
+        <g id="subIndice" transform="rotate(252)">
+          <line x1="0" y1="-57%" x2="0" y2="-45%" class="subDialIndice"/>
+        </g>
+        <g id="subIndice" transform="rotate(264)">
+          <line x1="0" y1="-57%" x2="0" y2="-45%" class="subDialIndice"/>
+        </g>
+        <g id="subIndice" transform="rotate(276)">
+          <line x1="0" y1="-57%" x2="0" y2="-45%" class="subDialIndice"/>
+        </g>
+        <g id="subIndice" transform="rotate(288)">
+          <line x1="0" y1="-57%" x2="0" y2="-45%" class="subDialIndice"/>
+        </g>
+        <g id="subIndice" transform="rotate(300)">
+          <line x1="0" y1="-57%" x2="0" y2="-40%" class="subDialIndice"/>
+        </g>
+        <g id="subIndice" transform="rotate(312)">
+          <line x1="0" y1="-57%" x2="0" y2="-45%" class="subDialIndice"/>
+        </g>
+        <g id="subIndice" transform="rotate(324)">
+          <line x1="0" y1="-57%" x2="0" y2="-45%" class="subDialIndice"/>
+        </g>
+        <g id="subIndice" transform="rotate(336)">
+          <line x1="0" y1="-57%" x2="0" y2="-45%" class="subDialIndice"/>
+        </g>
+        <g id="subIndice" transform="rotate(348)">
+          <line x1="0" y1="-57%" x2="0" y2="-45%" class="subDialIndice"/>
+        </g>
+      </g>
+    </symbol>
+    <symbol id="secondsSubHandSymbol" >
+      <g id="seconds" transform="translate(50%, 50%)" >
+        <g transform="translate(-8, -40)">
+          <image href="SubHands.png"  width="16" height="48"/>
+        </g>
+      </g>
+    </symbol>
+    <symbol id="minutesSubHandSymbol" >
+      <g id="chronoMinutes" transform="translate(150, 150)" >
+        <g transform="translate(-8, -40)">
+          <image href="SubHands.png"  width="16" height="48"/>
+        </g>
+      </g>
+    </symbol>
+    <symbol id="hoursSubHandSymbol" >
+      <g id="chronoHours" transform="translate(50%, 50%)" >
+        <g transform="translate(-8, -40)">
+          <image href="SubHands.png"  width="16" height="48"/>
+        </g>
+      </g>
+    </symbol>
+  </defs>
+  
+  <g id="nightWatch"><!-- what the watch looks like with lume -->
+    
+    <use href="#mainIndiceLume" class="nightLume"></use>
+      <g id="nightHours" transform="translate(50%,50%)">
+        <rect x="$-3" y="-90" width="6" height="90" fill="black" />
+        <g transform="translate(0,0)">
+          <rect x="$-2" y="-75" width="4" height="60" class="nightLume" />
+        </g>
+      </g>
+      <g id="nightMinutes" transform="translate(50%,50%)">
+        <rect x="$-3" y="-130" width="6" height="130" fill="black" />
+        <g transform="translate(0,0)">
+          <rect x="$-2" y="-122" width="4" height="100" class="nightLume" />
+        </g>
+      </g>
+      <g id="nightChronoSeconds" transform="translate(50%,50%)">
+        <rect x="$-4" y="-85" width="8" height="110" fill="black" />
+        <g transform="translate(0,0)">
+          <rect x="$-1" y="-135" width="2" height="60" fill="black" />
+        </g>
+        <g transform="translate(-3%,-32%)" fill="black">
+          <use href="#diamond" width="6%" height="6%" />
+        </g>
+         <g transform="translate(-2%,-31%)" class="nightLume">
+          <use href="#diamond" width="4%" height="4%" />
+        </g>
+      </g>
+ 
+  </g>
+  <g id="dayWatch"><!-- what the watch looks like fully lit -->
+    <g id="bezelAndCrystal">
+      <use href="#dial" fill="#111111" width="140%" height="140%"></use>
+      <use href="#dial" fill="#555555" width="108%" height="112%"></use>
+      <use href="#dial" fill="#333333" width="106%" height="110%"></use>
+    </g>
+
+    <!--  Main Dial moves as one piece  -->
+    <g id="mainDial" transform="translate(0, 0)" >
+      <use href="#dial" fill="#090909" width="100%" height="100%"></use>
+      <use href="#dial" fill="#282828" width="85%" height="85%"></use>
+
+      <use href="#mainIndice"></use>
+      <use href="#mainIndiceLume" class="dayLume"></use>
+
+      <g id="mainSecondIndicies">
+        <use href="#mainSecondIndice">
+          <set href="indiceGroup" attributeName="transform" to="translate(50%,50%)" />
+        </use>
+        <use href="#mainSecondIndice">
+          <set href="indiceGroup" attributeName="transform" to="translate(50%,50%) rotate(30)" />
+        </use>
+        <use href="#mainSecondIndice">
+          <set href="indiceGroup" attributeName="transform" to="translate(50%,50%) rotate(60)" />
+        </use>
+        <use href="#mainSecondIndice">
+          <set href="indiceGroup" attributeName="transform" to="translate(50%,50%) rotate(90)" />
+        </use>
+        <use href="#mainSecondIndice">
+          <set href="indiceGroup" attributeName="transform" to="translate(50%,50%) rotate(120)" />
+        </use>
+        <use href="#mainSecondIndice">
+          <set href="indiceGroup" attributeName="transform" to="translate(50%,50%) rotate(150)" />
+        </use>
+        <use href="#mainSecondIndice">
+          <set href="indiceGroup" attributeName="transform" to="translate(50%,50%) rotate(180)" />
+        </use>
+        <use href="#mainSecondIndice">
+          <set href="indiceGroup" attributeName="transform" to="translate(50%,50%) rotate(210)" />
+        </use>
+        <use href="#mainSecondIndice">
+          <set href="indiceGroup" attributeName="transform" to="translate(50%,50%) rotate(240)" />
+        </use>
+        <use href="#mainSecondIndice">
+          <set href="indiceGroup" attributeName="transform" to="translate(50%,50%) rotate(270)" />
+        </use>
+        <use href="#mainSecondIndice">
+          <set href="indiceGroup" attributeName="transform" to="translate(50%,50%) rotate(300)" />
+        </use>
+        <use href="#mainSecondIndice">
+          <set href="indiceGroup" attributeName="transform" to="translate(50%,50%) rotate(330)" />
+        </use>
+      </g>
+      <g id="mainSubSecondIndicies">
+        <use href="#mainSubSecondIndice">
+          <set href="mainSubSecondIndiceGroup" attributeName="transform" to="translate(50%,50%)" />
+        </use>
+        <use href="#mainSubSecondIndice">
+          <set href="mainSubSecondIndiceGroup" attributeName="transform" to="translate(50%,50%) rotate(30)" />
+        </use>
+        <use href="#mainSubSecondIndice">
+          <set href="mainSubSecondIndiceGroup" attributeName="transform" to="translate(50%,50%) rotate(60)" />
+        </use>
+        <use href="#mainSubSecondIndice">
+          <set href="mainSubSecondIndiceGroup" attributeName="transform" to="translate(50%,50%) rotate(90)" />
+        </use>
+        <use href="#mainSubSecondIndice">
+          <set href="mainSubSecondIndiceGroup" attributeName="transform" to="translate(50%,50%) rotate(120)" />
+        </use>
+        <use href="#mainSubSecondIndice">
+          <set href="mainSubSecondIndiceGroup" attributeName="transform" to="translate(50%,50%) rotate(150)" />
+        </use>
+        <use href="#mainSubSecondIndice">
+          <set href="mainSubSecondIndiceGroup" attributeName="transform" to="translate(50%,50%) rotate(180)" />
+        </use>
+        <use href="#mainSubSecondIndice">
+          <set href="mainSubSecondIndiceGroup" attributeName="transform" to="translate(50%,50%) rotate(210)" />
+        </use>
+        <use href="#mainSubSecondIndice">
+          <set href="mainSubSecondIndiceGroup" attributeName="transform" to="translate(50%,50%) rotate(240)" />
+        </use>
+        <use href="#mainSubSecondIndice">
+          <set href="mainSubSecondIndiceGroup" attributeName="transform" to="translate(50%,50%) rotate(270)" />
+        </use>
+        <use href="#mainSubSecondIndice">
+          <set href="mainSubSecondIndiceGroup" attributeName="transform" to="translate(50%,50%) rotate(300)" />
+        </use>
+        <use href="#mainSubSecondIndice">
+          <set href="mainSubSecondIndiceGroup" attributeName="transform" to="translate(50%,50%) rotate(330)" />
+        </use>
+        <text class="logo" x="50%" y="24%" >Δ</text>
+        <text class="logoName" x="50%" y="29%" >DELTA</text>
+        <text class="logoSignature" x="50%" y="33%" >SlothNovice</text>
+        <text class="logoText" x="50%" y="37%" >UNPROFESSIONAL</text>
+
+      </g>
+      <g id="subdials">
+        <use href="#subDial" x="12%" y="35%" width="31%" height="31%"/>
+        <use href="#subdialIndiceGroup12" width="25%" height="25%" x="27%" y="50%" />
+        <text class="subDialText" font-family="Fabrikat-Bold" x="27%" y="43%" >60</text>
+        <text class="subDialText" font-family="Fabrikat-Bold" x="34%" y="56%" >20</text>
+        <text class="subDialText" font-family="Fabrikat-Bold" x="20%" y="56%" >40</text>
+
+        <use href="#subDial" x="35%" y="58%" width="31%" height="31%"/>
+        <use href="#subdialIndiceGroup12" width="25%" height="25%" x="50%" y="73%" />
+        <text class="subDialText" font-family="Fabrikat-Bold" x="50%" y="65%" >12</text>
+        <text class="subDialText" font-family="Fabrikat-Bold" x="41%" y="75%" >9</text>
+        <text class="subDialText" font-family="Fabrikat-Bold" x="50%" y="84%" >6</text>
+        <text class="subDialText" font-family="Fabrikat-Bold" x="59%" y="75%" >3</text>
+
+        <use href="#subDial" x="58%" y="35%" width="31%" height="31%"/>
+        <use href="#subdialIndiceGroup30" width="25%" height="25%" x="73%" y="50%" />
+        <text class="subDialText" font-family="Fabrikat-Bold" x="73%" y="43%" >30</text>
+        <text class="subDialText" font-family="Fabrikat-Bold" x="80%" y="56%" >10</text>
+        <text class="subDialText" font-family="Fabrikat-Bold" x="66%" y="56%" >20</text>
+      </g>
+      <g>
+        <use href="#secondsGroup">
+          <set href="seconds" attributeName="transform" to="translate(27%,50%)" />
+        </use>
+        <use href="#chronoMinutesGroup">
+          <set href="chronoMinutes" attributeName="transform" to="translate(73%,50%)" />
+        </use>
+        <use href="#chronoHoursGroup">
+          <set href="chronoHours" attributeName="transform" to="translate(50%,73%)" />
+        </use>
+      </g>
+    </g>
+    
+    <use href="#hoursExternal" /> 
+    <use href="#minutesExternal" />
+    <use href="#chronoSecondsExternal" />
+
+  </g>
+  
+  
+
+  <rect id="stopStart" pointer-events="visible" x="60%" y="0" width="40%" height="25%" opacity="0" />
+  <rect id="reset" pointer-events="visible" x="60%" y="75%" width="40%" height="25%" opacity="0" />
+  <rect id="backlight" pointer-events="visible" x="0%" y="25%" width="40%" height="50%" opacity="0" />
+  
+<!--   <text id="zero" class="logoName" x="30" y="20" >zero</text>
+  <text id="one" class="logoName" x="280" y="20" >one</text>
+  <text id="two" class="logoName" x="30" y="290" >two</text>
+  <text id="three" class="logoName" x="280" y="290" >three</text> -->
+</svg>

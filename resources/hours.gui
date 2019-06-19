@@ -1,0 +1,26 @@
+<symbol id="hoursExternal">
+  <svg>
+    <g id="hours" transform="translate(50%,50%)">
+     <g class="dayHand" >
+      <circle cx="0" cy="0" r="17" />
+      <rect x="-5" y="-28%" width="10" height="28%" />
+      <line x1="-4" y1="-28%" x2="0" y2="-31%" stroke-width="1" />
+      <line x1="-3" y1="-28%" x2="0" y2="-31%" stroke-width="1" />
+      <line x1="-2" y1="-28%" x2="0" y2="-31%" stroke-width="1" />
+      <line x1="-1" y1="-28%" x2="0" y2="-31%" stroke-width="1" />
+      <line x1="0" y1="-28%" x2="0" y2="-31%" stroke-width="1" />
+      <line x1="1" y1="-28%" x2="0" y2="-31%" stroke-width="1" />
+      <line x1="2" y1="-28%" x2="0" y2="-31%" stroke-width="1" />
+      <line x1="3" y1="-28%" x2="0" y2="-31%" stroke-width="1" />
+      <line x1="4" y1="-28%" x2="0" y2="-31%" stroke-width="1" />
+    </g>
+    <!-- lume for hour hand -->
+    <rect id="hoursLume" x="-2" y="-25%" width="4" height="18%" fill="#e1e1c4"/>
+    <!-- drop shadow to define the lume -->
+    <line x1="-2" y1="-25%" x2="-2" y2="-7%" stroke-width="1"  fill="darkgray" />
+    <line x1="-2" y1="-25%" x2="1" y2="-25%" stroke-width="2"  fill="darkgray" />
+    </g>
+    <!-- bit of shade right around the minutes column center -->
+    <arc x="50%-15" y="50%-15" width="30" height="30" class="dayHandShadow" arc-width="4" start-angle="45" sweep-angle="250" />
+  </svg>
+</symbol>

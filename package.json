@@ -1,0 +1,24 @@
+{
+  "fitbit": {
+    "appUUID": "47018265-ca72-4767-a00e-2591b34e0111",
+    "appType": "clockface",
+    "appDisplayName": "OmegaSpeedmaster",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "#607d8b",
+    "requestedPermissions": [],
+    "buildTargets": [
+      "higgs",
+      "meson",
+      "gemini"
+    ],
+    "i18n": {
+      "en": {
+        "name": "OmegaSpeedmaster"
+      }
+    },
+    "defaultLanguage": "en-US"
+  },
+  "devDependencies": {
+    "@fitbit/sdk": "~3.1.0"
+  }
+}

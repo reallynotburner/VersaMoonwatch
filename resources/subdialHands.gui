@@ -1,0 +1,33 @@
+
+<symbol id="smallHand">
+  <g id="smallHandTranformGroup" class="dayHand" transform="translate(0, 0)">
+    <circle cx="0" cy="0" r="6" />
+    <rect x="-2" y="-12%" width="4" height="12%" />
+    <line x1="-1" y1="-12%" x2="0" y2="-13%" stroke-width="2" />
+    <line x1="1" y1="-12%" x2="0" y2="-13%" stroke-width="2" />
+  </g>
+  <!-- bit of shade right around the column center -->
+  <arc x="-4" y="-4" width="8" height="8" fill="#bbbbbb" arc-width="1" start-angle="75" sweep-angle="160" />
+  <circle cx="0" cy="0" r="1" fill="#555555" />
+</symbol>
+
+<symbol id="secondsGroup" >
+  <g id="seconds" transform="translate(0,0)">
+    <g id="secondsTransformGroup" transform="translate(0,0)">
+      <use href="#smallHand" />
+    </g>
+  </g>
+</symbol> 
+
+<symbol id="chronoMinutesGroup" >
+  <g id="chronoMinutes" transform="translate(0,0)">
+      <use href="#smallHand" />
+  </g>
+</symbol>
+
+<symbol id="chronoHoursGroup" >
+  <g id="chronoHours" transform="translate(0, 0)">
+      <use href="#smallHand" />
+  </g>
+</symbol>
+    

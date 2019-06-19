@@ -1,0 +1,82 @@
+.background {
+  viewport-fill: black;
+}
+#mainIndice {
+  fill: white;
+}
+.dayLume {
+  fill: #d2d2b4;
+}
+.nightLume {
+  fill: #a7fafa;
+}
+.subDialIndice {
+  stroke-width: 1;
+  fill: darkgray;
+}
+.subDialText {
+  fill: lightgray;
+  font-size: 15;
+  text-anchor: middle;
+}
+.subdialGradient {
+  x: "-100%";
+  y: "-100%";
+  width: "300%";
+  height: "300%";
+  fill: "#999999";
+  gradient-type: "radial";
+  gradient-x1: "50%";
+  gradient-y1: "70%";
+  gradient-x2: "80%";
+  gradient-y2: "100%";
+  gradient-color2: "black";
+}
+.crystalGradient {
+  x: "-100%";
+  y: "-100%";
+  width: "300%";
+  height: "300%";
+  fill: black;
+  gradient-type: "radial";
+  gradient-x1: "50%";
+  gradient-y1: "60%";
+  gradient-x2: "80%";
+  gradient-y2: "90%";
+  gradient-color2: #bbbbbb;
+}
+.subdialFace {
+  fill: "#333333";
+  r: "37%";
+}
+.logo {
+  font-family: Seville-Bold;
+  fill: white;
+  font-size: 28;
+  text-anchor: middle;
+}
+.logoName {
+  font-family: Seville-Bold;
+  text-length: 32;
+  fill: white;
+  font-size: 16;
+  text-anchor: middle;
+}
+.logoSignature {
+  fill: white;
+  font-size: 12;
+  text-anchor: middle;
+  font-family: Seville-Bold-Italic;
+}
+.logoText {
+  font-family: Seville-Bold;
+  fill: white;
+  font-size: 10;
+  text-anchor: middle;
+}
+.dayHand {
+  fill: white
+}
+.dayHandShadow {
+  fill: #dddddd;
+}

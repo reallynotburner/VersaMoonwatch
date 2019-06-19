@@ -1,0 +1,42 @@
+<symbol id="chronoSecondsExternal">
+  <svg>
+    <g id="chronoSecondsExternalTranformGroup" transform="translate(150, 150)">
+      <!--  This is the bottom trapezoid of the seconds hand    -->
+      <g class="dayHand" >
+        <line x1="-4" y1="13%" x2="-1" y2="-26%" stroke-width="3" />
+        <line x1="-2" y1="13%" x2="0" y2="-26%" stroke-width="3" />
+        <line x1="2" y1="13%" x2="0" y2="-26%" stroke-width="3" />
+        <line x1="0" y1="13%" x2="0" y2="-26%" stroke-width="3" />
+        <line x1="4" y1="13%" x2="1" y2="-26%" stroke-width="3" />
+        <!--  The diamond of the seconds hand    -->
+        <line x1="-1" y1="-26%" x2="-5" y2="-28%" stroke-width="3" />
+        <line x1="1" y1="-26%" x2="5" y2="-28%" stroke-width="3" />
+        <line x1="-5" y1="-28%" x2="0" y2="-35%" stroke-width="2" />
+        <line x1="5" y1="-28%" x2="0" y2="-35%" stroke-width="2" />
+
+        <!-- The tiny tip for the seconds hand  -->
+        <line x1="1" y1="-35%" x2="0" y2="-48%" stroke-width="1" />
+        <line x1="-1" y1="-35%" x2="0" y2="-48%" stroke-width="1" />   
+        <line x1="0" y1="-35%" x2="0" y2="-42%" stroke-width="1" /> 
+      </g>
+      <g class="dayLume">
+        <!-- The diamond of the chrono seconds hand -->
+        <!-- bottom of the diamond -->
+        <line x1="0" y1="-26%" x2="-4" y2="-28%" stroke-width="2" />
+        <line x1="0" y1="-26%" x2="4" y2="-28%" stroke-width="2" />
+        <line x1="0" y1="-26%" x2="-2" y2="-28%" stroke-width="2" />
+        <line x1="0" y1="-26%" x2="2" y2="-28%" stroke-width="2" />
+        <line x1="0" y1="-26%" x2="0" y2="-28%" stroke-width="2" />
+        <!-- top of the diamond -->
+        <line x1="-4" y1="-28%" x2="0" y2="-33%" stroke-width="2" />
+        <line x1="4" y1="-28%" x2="0" y2="-33%" stroke-width="2" />
+        <line x1="-2" y1="-28%" x2="0" y2="-33%" stroke-width="2" />
+        <line x1="2" y1="-28%" x2="0" y2="-33%" stroke-width="2" />
+        <line x1="0" y1="-28%" x2="0" y2="-33%" stroke-width="2" />
+      </g>
+      <circle cx="0" cy="0" r="1" fill="#222222"/>
+    </g>
+    <!-- bit of shade right around the seconds column center -->
+    <arc x="50%-4" y="50%-4" width="8" height="8" fill="#aaaaaa" arc-width="1" start-angle="75" sweep-angle="160" />
+  </svg>
+</symbol>
